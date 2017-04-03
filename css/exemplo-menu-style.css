@@ -1,73 +1,67 @@
-/*
-File of Style
-*/
-
-#header-main {
-  padding: 0px;
-  margin: 0px;
-}
-
-.access-bar {
-  background-color:#F2711C;
-}
-
-.access-bar .atalhos ul {
-  padding:0px;
-	margin:0px;
-	background-color:#F2711C;
-	list-style:none;
-}
-
-.access-bar .atalhos ul li {
-  display: inline;
-}
-
-.access-bar .atalhos ul a {
-  padding: 5px 10px;
-	display: inline-block;
-	background-color:#F2711C;
-	text-decoration: none;
-  color: #FFF;
-}
-
-header {
-
-}
-
-
-/* aqui é a estilização do menu nav bar*/
-/*Strip the ul of padding and list styling: */
-#menu {
-  width: 100%;
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /*padding-top: 1%;   */
   position: absolute;
-  background: #F2711C;
 }
 
-#menu li {
+li {
   display: inline-block;
   float: left;
-  margin-right: 2px;
+  margin-right: 1px;
 }
 
-.itens-menu {
+li a {
   display: block;
   min-width: 140px;
   height: 50px;
-  text-align: center;;
+  padding-left: 3%;
+  text-align: left;
   line-height: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
-  background: #F2711C;
+  background: #2f3036;
   text-decoration: none;
 }
 /*Hover state for to level links*/
-.itens-menu:hover {
-  background: #FFA500;
-  color: #696969;
+li:hover {
+  background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul li a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul li a:hover {
+  background: #19c589;
+  color: #fff;
+}
+
+/*Hide drpdown links until they are needed*/
+li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+  display: block;
+  float: none;
+}
+/*Prevent text wrapping on dropdown links*/
+li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover{
+  display: block;
 }
 
 /*hide checkbox*/
@@ -84,28 +78,27 @@ input[type=checkbox]:checked ~ #menu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
-  background: #F2711C;
-  text-align: left;
-  padding: 2% 5%;
+  background: #19c589;
+  text-align: center;
+  padding: 10px 0;
   display: none;
 }
 
 /*Responsive styles*/
 @media screen and (max-width: 760px) {
   /*Make dropdown links appear links*/
-  #menu {
+  ul {
     position: static;
     display: none;
   }
-  #menu li {
-    margin-top: 1px;
+  /*Create vertical spacing*/
+  li {
     margin-bottom: 1px;
   }
   /*Create vertical spacing*/
-  #menu li, li a {
+  ul li, li a {
     width: 100%;
   }
-
   .show-menu {
     display: block;
   }
