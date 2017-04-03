@@ -1,0 +1,32 @@
+/*
+File of Style
+*/
+
+#header-main {
+  padding: 0px;
+  margin: 0px;
+}
+
+.access-bar {
+  background-color:#F2711C; 
+}
+
+.access-bar .atalhos ul {
+  padding:0px;
+	margin:0px;
+	background-color:#F2711C;
+	list-style:none;
+}
+
+.access-bar .atalhos ul li {
+  display: inline;
+}
+
+.access-bar .atalhos ul a {
+  padding: 5px 10px;
+	display: inline-block;
+
+	background-color:#F2711C;
+	text-decoration: none;
+  color: #FFF;
+}
