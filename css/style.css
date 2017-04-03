@@ -8,7 +8,11 @@ File of Style
 }
 
 .access-bar {
+<<<<<<< HEAD
   background-color:#F2711C;
+=======
+  background-color:#F2711C; 
+>>>>>>> master
 }
 
 .access-bar .atalhos ul {
@@ -25,10 +29,15 @@ File of Style
 .access-bar .atalhos ul a {
   padding: 5px 10px;
 	display: inline-block;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 	background-color:#F2711C;
 	text-decoration: none;
   color: #FFF;
 }
+<<<<<<< HEAD
 
 header {
 
@@ -110,3 +119,5 @@ input[type=checkbox]:checked ~ #menu {
     display: block;
   }
 }
+=======
+>>>>>>> master
