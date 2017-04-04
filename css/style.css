@@ -8,11 +8,7 @@ File of Style
 }
 
 .access-bar {
-<<<<<<< HEAD
   background-color:#F2711C;
-=======
-  background-color:#F2711C; 
->>>>>>> master
 }
 
 .access-bar .atalhos ul {
@@ -29,29 +25,33 @@ File of Style
 .access-bar .atalhos ul a {
   padding: 5px 10px;
 	display: inline-block;
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 	background-color:#F2711C;
 	text-decoration: none;
   color: #FFF;
 }
-<<<<<<< HEAD
 
-header {
-
+.item-access {
+  min-width: 11em;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
 }
-
 
 /* aqui é a estilização do menu nav bar*/
 /*Strip the ul of padding and list styling: */
+#fundo {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  background: #F2711C;
+}
+
 #menu {
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /*padding-top: 1%;   */
   position: absolute;
   background: #F2711C;
 }
@@ -64,15 +64,16 @@ header {
 
 .itens-menu {
   display: block;
-  min-width: 140px;
+  min-width: 11em;
   height: 50px;
-  text-align: center;;
+  text-align: center;
   line-height: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   background: #F2711C;
   text-decoration: none;
 }
+
 /*Hover state for to level links*/
 .itens-menu:hover {
   background: #FFA500;
@@ -95,7 +96,7 @@ input[type=checkbox]:checked ~ #menu {
   color: #fff;
   background: #F2711C;
   text-align: left;
-  padding: 2% 5%;
+  padding: 2% 5% ;
   display: none;
 }
 
@@ -118,6 +119,11 @@ input[type=checkbox]:checked ~ #menu {
   .show-menu {
     display: block;
   }
+
 }
-=======
->>>>>>> master
+
+@media screen and (max-width: 980px) {
+  .itens-menu {
+    min-width: 8em;
+  }
+}
