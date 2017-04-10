@@ -13,41 +13,117 @@ File of Style
 
 .access-bar .atalhos ul {
   padding:0px;
+  padding-left: 4em;
 	margin:0px;
 	background-color:#F2711C;
 	list-style:none;
 }
 
 .access-bar .atalhos ul li {
-  display: inline;
+  display: inline-table;
 }
 
 .access-bar .atalhos ul a {
-  padding: 5px 10px;
-	display: inline-block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: inline-table;
 	background-color:#F2711C;
 	text-decoration: none;
   color: #FFF;
 }
 
-.item-access {
-  min-width: 11em;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+.itens-access-bar {
+  min-width: 9em;
 }
 
-/* aqui é a estilização do menu nav bar*/
-/*Strip the ul of padding and list styling: */
-#fundo {
+.btn-pesquisa {
+  padding-top: 0.55em;
+  padding-right: 6em;
+}
+
+.location {
+  padding-top: 0.5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+.justificado {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.footer {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 50px;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   background: #F2711C;
+  text-align: center;
+
 }
 
-#menu {
+.direitos {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background: #FFCD71;
+  text-align: center;
+}
+
+/* Olhar como colocar a porra do botão de pequisa nesse tamanho de tela*/
+@media screen and (max-width: 360px) {
+  .btn-pesquisa {
+    padding-top: 20em;
+    padding-right: 1em;
+  }
+}
+
+/*Responsive styles*/
+@media screen and (max-width: 770px) {
+  .access-bar .atalhos ul {
+    padding-left: 0;
+  }
+
+  .btn-pesquisa {
+    padding-top: 3.5em;
+    padding-right: 1em;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  .access-bar .atalhos ul {
+    padding-left: 0;
+  }
+
+  .btn-pesquisa {
+    padding-top: 1em;
+    padding-right: 1em;
+  }
+
+}
+
+@media screen and (max-width: 1105px) {
+  .access-bar .atalhos ul {
+    padding-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 852px) {
+  .access-bar .atalhos ul {
+    padding-left: 0;
+  }
+
+}
+
+
+/* inicio do teste*/
+#navegation {
   width: 100%;
   list-style-type: none;
   margin: 0;
@@ -56,74 +132,136 @@ File of Style
   background: #F2711C;
 }
 
-#menu li {
+#navegation li {
   display: inline-block;
-  float: left;
-  margin-right: 2px;
+  float: center;
+  /*margin: 1.4em;*/
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.itens-menu {
-  display: block;
-  min-width: 11em;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+#navegation li a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
   color: #fff;
-  background: #F2711C;
   text-decoration: none;
 }
 
-/*Hover state for to level links*/
-.itens-menu:hover {
+#navegation li a:hover {
   background: #FFA500;
   color: #696969;
 }
 
-/*hide checkbox*/
 input[type=checkbox] {
   display: none;
 }
 
-/*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ #menu {
+input[type=checkbox]:checked ~ #navegation {
   display: block;
 }
 
-.show-menu {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  color: #fff;
+
+.cabecalho {
+  min-height: 4.2em;
+  /*position: fixed;*/
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
   background: #F2711C;
-  text-align: left;
-  padding: 2% 5% ;
-  display: none;
+  z-index: 2;
 }
 
-/*Responsive styles*/
-@media screen and (max-width: 760px) {
-  /*Make dropdown links appear links*/
-  #menu {
-    position: static;
-    display: none;
-  }
-  #menu li {
-    margin-top: 1px;
-    margin-bottom: 1px;
-  }
-  /*Create vertical spacing*/
-  #menu li, li a {
-    width: 100%;
-  }
 
-  .show-menu {
+@media screen and (max-width: 767px) {
+  #navegation li {
     display: block;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 15%;
   }
 
-}
+  #navegation li a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+  }
 
-@media screen and (max-width: 980px) {
-  .itens-menu {
-    min-width: 8em;
+
+  .cabecalho .control-nav {
+    /*position: absolute;*/
+    /*right: 20px;
+    top: 20px;*/
+    position: relative;
+    left: 2em;
+    top: 1.4em;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    /*border: solid #333;*/
+    border: solid #fff;
+    border-width: 3px 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .cabecalho .control-nav:before {
+    content: "";
+    display: block;
+    height: 3px;
+    /*background: #333;*/
+    background: #fff;
+  }
+
+  .cabecalho .control-nav-close {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  .cabecalho nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    border-left: 1px solid #ccc;
+    background: #F2711C;
+    overflow-x: auto;
+    z-index: 2;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
   }
 }
+
+#control-nav:checked ~ .control-nav-close {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+#control-nav:checked ~ nav {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+
+/* final do teste*/
