@@ -1,28 +1,32 @@
 /*
 File of Style
 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
-#header-main {
+header {
   padding: 0px;
   margin: 0px;
 }
 
+/*Aqui começa a estilização da barra de acessbilidade*/
 .access-bar {
   background-color:#F2711C;
+  text-align: center;
 }
-
 .access-bar .atalhos ul {
   padding:0px;
-  padding-left: 4em;
 	margin:0px;
 	background-color:#F2711C;
 	list-style:none;
+  font-family: sans-serif;
 }
-
 .access-bar .atalhos ul li {
   display: inline-table;
 }
-
 .access-bar .atalhos ul a {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -30,11 +34,13 @@ File of Style
 	background-color:#F2711C;
 	text-decoration: none;
   color: #FFF;
-}
-
-.itens-access-bar {
   min-width: 9em;
 }
+.access-bar .atalhos ul li a:hover {
+  color: #000;
+}
+/*Aqui termina a estilização da barra de acessbilidade*/
+
 
 .btn-pesquisa {
   padding-top: 0.55em;
@@ -47,11 +53,84 @@ File of Style
   text-align: left;
 }
 
+
+/*Aqui começa a estilização da barra de navegação: */
+#nav ul {
+  background-color: #F2711C;
+  overflow: hidden;
+  color: white;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-transition: max-height: 0.4s;
+  -ms-transition: max-height: 0.4s;
+  -moz-transition: max-height: 0.4s;
+  -o-transition: max-height: 0.4s;
+  transition: max-height: 0.4s;
+}
+
+#nav-list-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#nav ul li {
+  display: inline-block;
+  padding: 1.3em;
+}
+
+#nav ul li:hover {
+  background-color: #FFC80B;
+  color: #FFF;
+}
+
+.handle {
+  width: 100%;
+  background: #F38C23;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #FFF;
+  display: none;
+}
+
+@media screen and (max-width: 670px) {
+  #access-bar #lista li {
+    display: inline;
+  }
+
+  nav ul {
+    max-height: 0;
+  }
+  .showing {
+    max-height: 22em;
+  }
+  #nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+  }
+  .handle {
+    display: block;
+  }
+}
+/*Aqui termina a estilização da barra de navegação */
+
+
+
 .justificado {
   text-align: justify;
   text-justify: inter-word;
 }
 
+
+
+/*Aqui é a parte do footer */
 .footer {
   width: 100%;
   padding-bottom: 2em;
@@ -62,7 +141,6 @@ File of Style
   text-align: center;
 
 }
-
 .direitos {
   width: 100%;
   padding-top: 1em;
@@ -73,195 +151,4 @@ File of Style
   background: #FFCD71;
   text-align: center;
 }
-
-/* Olhar como colocar a porra do botão de pequisa nesse tamanho de tela*/
-@media screen and (max-width: 360px) {
-  .btn-pesquisa {
-    padding-top: 20em;
-    padding-right: 1em;
-  }
-}
-
-/*Responsive styles*/
-@media screen and (max-width: 770px) {
-  .access-bar .atalhos ul {
-    padding-left: 0;
-  }
-
-  .btn-pesquisa {
-    padding-top: 3.5em;
-    padding-right: 1em;
-  }
-
-}
-
-@media screen and (max-width: 980px) {
-  .access-bar .atalhos ul {
-    padding-left: 0;
-  }
-
-  .btn-pesquisa {
-    padding-top: 1em;
-    padding-right: 1em;
-  }
-
-}
-
-@media screen and (max-width: 1105px) {
-  .access-bar .atalhos ul {
-    padding-left: 0;
-  }
-
-}
-
-@media screen and (max-width: 852px) {
-  .access-bar .atalhos ul {
-    padding-left: 0;
-  }
-
-}
-
-
-/* inicio do teste*/
-#navegation {
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  background: #F2711C;
-}
-
-#navegation li {
-  display: inline-block;
-  float: center;
-  /*margin: 1.4em;*/
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-#navegation li a {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-#navegation li a:hover {
-  background: #FFA500;
-  color: #696969;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox]:checked ~ #navegation {
-  display: block;
-}
-
-
-.cabecalho {
-  min-height: 4.2em;
-  /*position: fixed;*/
-  top: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 1px solid #ccc;
-  background: #F2711C;
-  z-index: 2;
-}
-
-
-@media screen and (max-width: 767px) {
-  #navegation li {
-    display: block;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: 15%;
-  }
-
-  #navegation li a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-  }
-
-
-  .cabecalho .control-nav {
-    /*position: absolute;*/
-    /*right: 20px;
-    top: 20px;*/
-    position: relative;
-    left: 2em;
-    top: 1.4em;
-    display: block;
-    width: 30px;
-    padding: 5px 0;
-    /*border: solid #333;*/
-    border: solid #fff;
-    border-width: 3px 0;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .cabecalho .control-nav:before {
-    content: "";
-    display: block;
-    height: 3px;
-    /*background: #333;*/
-    background: #fff;
-  }
-
-  .cabecalho .control-nav-close {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    z-index: 1;
-    background: rgba(0,0,0,0.4);
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    -webkit-transform: translate(100%, 0);
-    -ms-transform: translate(100%, 0);
-    transform: translate(100%, 0);
-  }
-
-  .cabecalho nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 250px;
-    border-left: 1px solid #ccc;
-    background: #F2711C;
-    overflow-x: auto;
-    z-index: 2;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    -webkit-transform: translate(100%, 0);
-    -ms-transform: translate(100%, 0);
-    transform: translate(100%, 0);
-  }
-}
-
-#control-nav:checked ~ .control-nav-close {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-#control-nav:checked ~ nav {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-
-/* final do teste*/
+/*Aqui termina a parte do footer */

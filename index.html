@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <title>Gazata do Cariri</title>
 
-    <script type="js/jquery.min.js"></script>
-    <script type="js/semantic.min.js"></script>
-    <script type="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/semantic.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="css/semantic.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/themes/default/assets/fonts/icons.ttf" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   </head>
   <body>
 
@@ -20,25 +19,18 @@
 
     </div>
 
-    <header class="header-main" id="header-main">
+    <header>
       <div class="access-bar">
         <div class="ui container atalhos">
           <ul>
-            <li class="item">
-              <a href="#" accesskey="1" class="itens-access-bar">[1]Ir para conteúdo</a>
-            </li>
-            <li class="item">
-              <a href="#" accesskey="2" class="itens-access-bar">[2]Ir para pesquisa</a>
-            </li>
-            <li class="item">
-              <a href="#" accesskey="3" class="itens-access-bar">[3]Alto contraste</a>
-            </li>
-            <li class="item">
-              <a href="#" accesskey="5" class="itens-access-bar">[4]Mapa do site</a>
-            </li>
+            <li><a href="#" accesskey="1">[1]Ir para conteúdo</a></li>
+            <li><a href="#" accesskey="2">[2]Ir para pesquisa</a></li>
+            <li><a href="#" accesskey="3">[3]Alto contraste</a></li>
+            <li><a href="#" accesskey="4">[4]Mapa do site</a></li>
           </ul>
         </div>
       </div>
+
       <br>
       <div class="ui container">
         <div class="ui two column grid">
@@ -69,36 +61,26 @@
     <br>
 
     <!-- inicio do menu -->
-    <div class="cabecalho">
-      <input type="checkbox" id="control-nav" />
-      <label for="control-nav" class="control-nav"></label>
-      <label for="control-nav" class="control-nav-close"></label>
-
-      <nav class="nave">
-        <ul class="" id="navegation">
-          <li><a href="#" title="INÍCIO">INÍCIO</a></li>
-          <li><a href="#" title="CARIRI">CARIRI</a></li>
-          <li><a href="#" title="CEARÁ">CEARÁ</a></li>
-          <li><a href="#" title="BRASIL">BRASIL</a></li>
-          <li><a href="#" title="POLÍTICA">POLÍTICA</a></li>
-          <li><a href="faleconosco.html"title="FALE CONOSCO">FALE CONOSCO</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav id="nav">
+      <div class="handle"><i class="content icon"></i> MENU</div>
+      <ul>
+        <a href="#" id="nav-list-link" id="inicio"><li>INÍCIO</li></a>
+        <a href="#" id="nav-list-link" id="cariri"><li>CARIRI</li></a>
+        <a href="#" id="nav-list-link" id="ceara"><li>CEARÁ</li></a>
+        <a href="#" id="nav-list-link" id="brasil"><li>BRASIL</li></a>
+        <a href="#" id="nav-list-link" id="politica"><li>POLÍTICA</li></a>
+        <a href="#" id="nav-list-link" ><li id="falaconosco">FALE CONOSCO</li></a>
+      </ul>
+    </nav>
     <!-- ​final do menu  -->
 
-    <div class="ui container">
+    <div class="ui container" id="conteudo">
       <div class="ui grid">
         <div class="row">
           <div class="location">
             <div class="ui breadcrumb">
               <label for="">Você está aqui: </label>
               <div class="active section">Início</div>
-              <!-- <a class="active section">Início</a>
-              <i class="right chevron icon divider"></i>
-              <a class="section">Registration</a>
-              <i class="right arrow icon divider"></i>
-              <div class="active section">Personal Information</div> -->
             </div>
           </div>
         </div>
